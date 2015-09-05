@@ -1,4 +1,4 @@
-package com.github.sunitparekh.movierental;
+package com.github.sunitparekh.movierental.excercise1;
 
 
 import org.springframework.stereotype.Service;

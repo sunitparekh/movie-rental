@@ -1,5 +1,6 @@
-package com.github.sunitparekh.movierental;
+package com.github.sunitparekh.movierental.excercise1;
 
+import com.github.sunitparekh.movierental.ApplicationConfigurations;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
