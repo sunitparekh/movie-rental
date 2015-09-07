@@ -48,6 +48,7 @@ public class MovieServiceTest {
 
         Movie movie = movieService.fetchMovie("tt2381249");
 
+        mockServer.verify();
         assertThat(movie.getTitle(),equalTo("Sunit Parekh"));
     }
 
@@ -58,5 +59,7 @@ public class MovieServiceTest {
                 .andRespond(withServerError());
 
         Movie movie = movieService.fetchMovie("tt2381249");
+
+        mockServer.verify();
     }
 }
