@@ -1,4 +1,4 @@
-package com.github.sunitparekh.movierental.excercise1;
+package com.github.sunitparekh.movierental.exercise1;
 
 import com.github.sunitparekh.movierental.ApplicationConfigurations;
 import org.junit.Assert;
