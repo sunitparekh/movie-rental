@@ -58,8 +58,12 @@ public class MovieServiceTest {
         mockServer.expect(requestTo("http://www.omdbapi.com/?i=tt2381249&plot=full&r=json"))
                 .andRespond(withServerError());
 
-        Movie movie = movieService.fetchMovie("tt2381249");
+        try {
+            movieService.fetchMovie("tt2381249");
+        } catch (HttpServerErrorException e) {
+            mockServer.verify();
+            throw e;
+        }
 
-        mockServer.verify();
     }
 }
