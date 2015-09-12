@@ -19,7 +19,7 @@ public class ServiceATest {
 
     @Test
     public void testGreetUser() throws Exception {
-        String greeting = serviceA.greetUser("1234");
-        Assert.assertThat(greeting,equalTo("Hello, Sunit 1234"));
+        String greeting = serviceA.greetUser("sp18336");
+        Assert.assertThat(greeting,equalTo("Hello, Sunit Parekh"));
     }
 }
