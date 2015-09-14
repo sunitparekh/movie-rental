@@ -24,7 +24,7 @@ public class FileMovieServiceTest {
     @Test
     public void testMovieServiceWithoutMock() throws IOException {
         Movie movie = movieService.fetchMovie("tt2381249");
-        assertThat(movie.getTitle(),equalTo("Mission: Impossible - Rogue Nation"));
+        assertThat(movie.Title,equalTo("Mission: Impossible - Rogue Nation"));
     }
 
 }

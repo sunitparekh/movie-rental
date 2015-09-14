@@ -15,8 +15,7 @@ public class OmdbMovieService implements MovieService {
     @Override
     public Movie fetchMovie(String imdbId){
         String url = String.format("http://www.omdbapi.com/?i=%s&plot=full&r=json",imdbId);
-        Map movieMap = rest.getForObject(url,Map.class);
-        return Movie.create(movieMap);
+        return rest.getForObject(url,Movie.class);
     }
 
 }

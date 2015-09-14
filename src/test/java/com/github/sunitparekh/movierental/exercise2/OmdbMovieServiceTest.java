@@ -37,7 +37,7 @@ public class OmdbMovieServiceTest {
     @Test
     public void testMovieServiceWithoutMock() throws IOException {
         Movie movie = movieService.fetchMovie("tt2381249");
-        assertThat(movie.getTitle(),equalTo("Mission: Impossible - Rogue Nation"));
+        assertThat(movie.Title,equalTo("Mission: Impossible - Rogue Nation"));
     }
 
     @Test
@@ -49,7 +49,7 @@ public class OmdbMovieServiceTest {
         Movie movie = movieService.fetchMovie("tt2381249");
 
         mockServer.verify();
-        assertThat(movie.getTitle(),equalTo("Sunit Parekh"));
+        assertThat(movie.Title,equalTo("Sunit Parekh"));
     }
 
     @Test(expected = HttpServerErrorException.class)
