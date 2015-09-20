@@ -18,15 +18,20 @@
     <![endif]-->
 </head>
 <body>
-<h1>Hello, ${data.name}!</h1>
+<div class="container">
 
-<h2>Cities...</h2>
+    <div class="page-header">
+        <h1>Hello, ${data.name}!</h1>
+    </div>
 
-<#list data.cities as city >
-    <div>${city}</div>
+    <h2>Cities...</h2>
+    <#list data.cities as city >
+        <div class="row">
+            <div class="col-md-4">${city}</div>
+        </div>
+    </#list>
 
-</#list>
-
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
