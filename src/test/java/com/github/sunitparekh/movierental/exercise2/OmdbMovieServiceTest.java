@@ -1,6 +1,6 @@
 package com.github.sunitparekh.movierental.exercise2;
 
-import com.github.sunitparekh.movierental.ApplicationConfigurations;
+import com.github.sunitparekh.movierental.MovieRentalApplication;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -23,7 +23,7 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = ApplicationConfigurations.class)
+@SpringApplicationConfiguration(classes = MovieRentalApplication.class)
 public class OmdbMovieServiceTest {
 
     @Autowired

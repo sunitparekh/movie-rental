@@ -1,6 +1,6 @@
 package com.github.sunitparekh.movierental.exercise1;
 
-import com.github.sunitparekh.movierental.ApplicationConfigurations;
+import com.github.sunitparekh.movierental.MovieRentalApplication;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import static org.hamcrest.core.IsEqual.equalTo;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = ApplicationConfigurations.class)
+@SpringApplicationConfiguration(classes = MovieRentalApplication.class)
 public class ServiceATest {
 
     @Autowired
