@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.context.annotation.Profile;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -23,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringApplicationConfiguration(classes = MovieRentalApplication.class)
 @WebAppConfiguration
 
-public class WelcomeControllerTest {
+public class MovieControllerTest {
     protected MockMvc mockMVC;
 
     @Autowired
@@ -36,14 +37,14 @@ public class WelcomeControllerTest {
 
     @Test
     public void shouldReturnStatus200() throws Exception {
-        mockMVC.perform(get("/welcome/Sunit"))
+        mockMVC.perform(get("/movies"))
                 .andExpect(status().isOk());
     }
 
     @Test
     public void shouldHaveNameIntheResponseH1Tag() throws Exception {
-        mockMVC.perform(get("/welcome/Sunit"))
-                .andExpect(content().string(containsString("<h1>Hello, Sunit!</h1>")));
+        mockMVC.perform(get("/movies"))
+                .andExpect(content().string(containsString("<div class=\"col-md-4\">3 Idiots</div>")));
     }
 
 }
