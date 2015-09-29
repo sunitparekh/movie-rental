@@ -42,7 +42,7 @@ public class MovieControllerTest {
     }
 
     @Test
-    public void shouldHaveNameIntheResponseH1Tag() throws Exception {
+    public void shouldHaveMovieTitleIntheResponseH1Tag() throws Exception {
         mockMVC.perform(get("/movies"))
                 .andExpect(content().string(containsString("<div class=\"col-md-4\">3 Idiots</div>")));
     }

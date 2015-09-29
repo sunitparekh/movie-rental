@@ -27,6 +27,7 @@
 <#list movies as movie >
     <div class="row">
         <div class="col-md-4">${movie.title}</div>
+        <div class="col-md-4">${movie.releaseYear}</div>
     </div>
 </#list>
 
